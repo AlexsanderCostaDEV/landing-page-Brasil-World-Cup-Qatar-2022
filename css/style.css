@@ -31,7 +31,7 @@ body {
     background-position: 35% bottom;
     font-family: 'Iceland', cursive;
     display: grid;
-    grid-template-rows: 140px 1fr 200px;
+    
 }
 .overlay {
     position: absolute;
@@ -49,7 +49,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 74px;
+    margin: 0 64px;
 }
 .logo {
     display: flex;
@@ -156,4 +156,55 @@ footer {
 .match__date {
     color: var(--primary-color);
     font-size: 2rem;
+}
+
+@media (max-width:1024px) {
+    body {
+        background-repeat: repeat;
+        grid-template-rows: 140px calc(100vh - 140px) 1fr;
+    }
+    header {
+        margin: 32px;
+    }
+    nav::before {
+        content: "\2261";
+        font-size: 4rem;
+        font-weight: 600;
+        color: #fff;
+    }
+    .menu {
+        display: none;
+    }
+    .title {
+        font-size: 30vw
+    }
+    .star {
+        font-size: 3rem;
+    }
+    .matchs {
+        margin-top: 32px;
+    }
+    footer {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        padding: 32px;
+    }
+    .group {
+        align-items: center;
+
+    }
+    .group-flags {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .matchs {
+        align-items: center;
+        place-self: center;
+    }
+    .match-container {
+        flex-direction: column;
+    }
+    .match:last-child {
+        border-right: 2px solid #fff;
+    }
 }
