@@ -1,0 +1,111 @@
+/*font import*/
+@import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
+
+/*reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*reset*/
+a {
+    text-decoration: none;
+    color: inherit;
+}
+/*reset*/
+ul, ol, li {
+    list-style: none;
+}
+
+:root {
+    --primary-color: #FCD116;
+    --secondary-color: #108E34;
+    --tertiary-color: #0C4076;
+}
+body {
+    height: 100vh;
+    background-image: url(../img/estadio-lusail.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 35% bottom;
+    font-family: 'Iceland', cursive;
+    display: grid;
+    grid-template-rows: 140px 1fr 200px;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(../img/background-cores.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .6;
+    z-index: -1;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 74px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.logo__text {
+    width: 100px;
+    color: #fff;
+    font-size: 3rem;
+    text-shadow: 2px 2px 2px #000;
+}
+.menu {
+    display: flex;
+    gap: 32px;
+    font-size: 2rem;
+    color: #fff;
+}
+.menu__item {
+    text-shadow: 2px 2px 2px #000;
+    font-weight: 900;
+    border-bottom: 4px solid transparent;
+    transition: all 0.5s;
+}
+.menu__item:hover {
+    color: var(--primary-color);
+    border-color: var(--secondary-color);
+}
+main {
+    display: grid;
+    place-content: center;
+}
+.title {
+    font-size: 21vw;
+    color: var(--primary-color);
+    text-shadow: 
+        -4px -4px 0px #fff,
+        4px 4px 0px #fff,
+        -4px 4px 0px #fff,
+        4px -4px 0 #fff,
+        8px 16px 9px #0009;
+    user-select: none;
+    line-height: 60%;
+}
+
+.star-container {
+    place-self: end;
+    user-select: none;
+    display: flex;
+    gap: 16px;
+}
+ .star {
+    font-size: 4rem;
+    color: var(--secondary-color);
+    -webkit-text-stroke: 3px var(--primary-color);
+}
+
+.star:last-child {
+    color: var(--tertiary-color);
+}
